@@ -13,3 +13,7 @@ This is very useful for rapid prototyping or explorative development.
 
 This will import ```module``` and execute the function ```main```,
 which is expected to run some sort of application loop (e.g. gui event loop).
+
+If a file change is detected in the directory tree below the current working directory,
+```module.main``` is terminated via SIGINT, changed modules are reloaded, and
+```module.main``` is called again.
